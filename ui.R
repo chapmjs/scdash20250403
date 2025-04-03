@@ -2,7 +2,7 @@
 # User interface for Supply Chain Dashboard
 
 ui <- fluidPage(
-  useShinyjs(),
+  shinyjs::useShinyjs(),
   
   # Custom CSS
   tags$head(
