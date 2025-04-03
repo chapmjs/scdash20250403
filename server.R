@@ -415,46 +415,46 @@ server <- function(input, output, session) {
   })
   
   # Output for monthly data table
-  output$monthlyDataTable <- renderDT({
+  output$monthlyDataTable <- DT::renderDT({
     req(values$monthlyData)
     
-    datatable(values$monthlyData, 
-              options = list(
-                dom = 't',
-                ordering = FALSE,
-                columnDefs = list(
-                  list(className = 'dt-center', targets = 1:12)
-                )
-              ),
-              rownames = FALSE,
-              editable = TRUE
+    DT::datatable(values$monthlyData, 
+                  options = list(
+                    dom = 't',
+                    ordering = FALSE,
+                    columnDefs = list(
+                      list(className = 'dt-center', targets = 1:12)
+                    )
+                  ),
+                  rownames = FALSE,
+                  editable = TRUE
     )
   })
   
   # Output for shortage warning table
-  output$shortageWarningTable <- renderDT({
+  output$shortageWarningTable <- DT::renderDT({
     req(values$shortageWarnings)
     
-    datatable(values$shortageWarnings,
-              options = list(
-                dom = 't',
-                ordering = FALSE,
-                columnDefs = list(
-                  list(className = 'dt-center', targets = 1:4),
-                  list(targets = 4, render = JS(
-                    "function(data, type, row, meta) {
+    DT::datatable(values$shortageWarnings,
+                  options = list(
+                    dom = 't',
+                    ordering = FALSE,
+                    columnDefs = list(
+                      list(className = 'dt-center', targets = 1:4),
+                      list(targets = 4, render = JS(
+                        "function(data, type, row, meta) {
                       return (data < 0) ? 
                         '<span style=\"color:red;font-weight:bold\">' + data + '</span>' : 
                         '<span style=\"color:green\">' + data + '</span>';
                     }"
-                  ))
-                )
-              ),
-              rownames = FALSE
+                      ))
+                    )
+                  ),
+                  rownames = FALSE
     ) %>%
-      formatStyle(
+      DT::formatStyle(
         'Status',
-        backgroundColor = styleEqual(
+        backgroundColor = DT::styleEqual(
           c('SHORTAGE', 'OK'), 
           c('#ffdddd', '#ddffdd')
         )

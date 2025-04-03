@@ -91,7 +91,7 @@ ui <- fluidPage(
              column(width = 9,
                     div(class = "data-panel",
                         h4("Supply Chain Data"),
-                        DTOutput("monthlyDataTable")
+                        DT::DTOutput("monthlyDataTable")
                     )
              )
            ),
@@ -101,7 +101,7 @@ ui <- fluidPage(
              column(width = 12,
                     div(class = "shortage-panel",
                         h4("Supply Shortage Warning (Next 6 Months)"),
-                        DTOutput("shortageWarningTable")
+                        DT::DTOutput("shortageWarningTable")
                     )
              )
            )
