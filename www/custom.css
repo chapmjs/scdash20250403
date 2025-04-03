@@ -1,0 +1,153 @@
+/* custom.css */
+/* Styling for Supply Chain Dashboard */
+
+/* Dashboard overall layout */
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Title block */
+#title-block {
+  background-color: #f0f0f0;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border-left: 5px solid #005580;
+}
+
+#titleBlock {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Date section */
+.date-section {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* Control panels */
+.control-panel, .forecast-selector {
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.action-button {
+  flex-grow: 0.45;
+  margin: 0 5px;
+}
+
+/* Part information panel */
+.part-info-panel {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+}
+
+.info-row {
+  margin-bottom: 10px;
+}
+
+.info-label {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+/* Override input styling to match Excel */
+.form-control {
+  border: 1px solid #ccc;
+  background-color: #e0ffe0; /* Light green for editable cells */
+}
+
+/* Data tables */
+.data-panel, .shortage-panel {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* DataTable styling */
+.dataTables_wrapper {
+  padding: 0;
+}
+
+table.dataTable {
+  border-collapse: collapse !important;
+  width: 100% !important;
+}
+
+table.dataTable thead th {
+  background-color: #005580;
+  color: white;
+  text-align: center;
+  padding: 8px 10px;
+}
+
+table.dataTable tbody td {
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+}
+
+/* Highlight for the category names (first column) */
+table.dataTable tbody td:first-child {
+  font-weight: bold;
+  background-color: #f2f2f2;
+}
+
+/* Editable cells styling */
+table.dataTable tbody td.editable {
+  background-color: #e0ffe0; /* Light green for editable cells */
+}
+
+/* Shortage warning table styling */
+#shortageWarningTable table tbody td {
+  text-align: center;
+}
+
+.shortage-warning {
+  background-color: #ffdddd !important;
+}
+
+.good-supply {
+  background-color: #ddffdd !important;
+}
+
+/* Footer */
+.footer-content {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  border-top: 3px solid #005580;
+  font-size: 0.9em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .button-row {
+    flex-direction: column;
+  }
+  
+  .action-button {
+    margin: 5px 0;
+    width: 100%;
+  }
+}
