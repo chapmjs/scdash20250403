@@ -1,0 +1,10 @@
+name: SupplyChainDashboard
+title: Supply Chain Dashboard
+username: chapmjs
+account: chapmjs
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 14418090
+bundleId: 10049749
+url: https://chapmjs.shinyapps.io/SupplyChainDashboard/
+version: 1
